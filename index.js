@@ -39,9 +39,44 @@ function login(){
 
     // ...
   });
-
 }
 
 function logout(){
   firebase.auth().signOut();
 }
+var preobject = document.getElementById('email_field');
+//Create references
+const dbRefObject = firebase.database().ref().child('text');
+//Sync object changes
+dbRefObject.on('value', snap => console.log(snap.val()));
+
+function Session() {}
+
+Session.prototype.init = function() {
+  console.log('inside Session.init()');
+
+  //capturing all click, touch and keypress events
+	window.addEventListener('touchstart',Timeout,false);
+	window.addEventListener('click',Timeout,false);
+	window.addEventListener('keypress', Timeout, false);
+
+	function _timeout(){
+		return function() {
+      close()
+			//implement your logic here to make
+      //a server side call (REST maybe?)
+      //that kills the server side sessiom
+		}	
+	}
+	function Timeout() {
+	console.log('inside goTimeout()');
+		if(typeof(timer) != 'undefined'){
+			console.log("clearing timer");
+			timer = clearTimeout(timer,); //reset as soon as something is clickedzz
+		}
+		timer = setTimeout(_timeout(), 300000);
+	}
+}
+
+var sessionTimeout = new Session();
+sessionTimeout.init();

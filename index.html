@@ -1,6 +1,7 @@
+
 <html>
 <head>
-  <title>Firebase Login</title>
+  <title>Digital Sticky Notes</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" >
@@ -8,21 +9,83 @@
 </head>
 <body>
   <div id="login_div" class="main-div"> 
-    <h3>Firebase Web login Example</h3>
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
+    <h3>Digital Sticky Notes</h3>
+    <input  tabindex="1" type="email" placeholder="Email..." id="email_field" />
+    <input  tabindex="2" type="password" placeholder="Password..." id="password_field" />
 
-    <button onclick="login()">Login to Account</button>
+    <button  tabindex="3" onclick="login()">Login to Account</button>
   <br>
-    <button onclick="signup()" id="mybutton" class="float-left submit-button">Sign up</button>
+    <button  tabindex="4" onclick="signup()" id="mybutton" class="float-left submit-button">Sign up</button>
   </div>
  
   
 
   <div id="user_div" class="loggedin-div">
     <h3>Welcome User</h3>
-    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
-    <button onclick="logout()">Logout</button>
+    <p id="user_para">Welcome to Digital Sticky Notes. You're currently logged in.</p>
+    <ul>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #1</h2>
+          <p>Text Content #1</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #2</h2>
+          <p>Text Content #2</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #3</h2>
+          <p>Text Content #3</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #4</h2>
+          <p>Text Content #4</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #5</h2>
+          <p>Text Content #5</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #6</h2>
+          <p>Text Content #6</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #7</h2>
+          <p>Text Content #7</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #8</h2>
+          <p>Text Content #8</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #9</h2>
+          <p>Text Content #9</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" contenteditable>
+          <h2>Title #10</h2>
+          <p>Text Content #10</p>
+        </a>
+      </li>
+    </ul>
+    <button  tabindex="5" onclick="logout()">Logout</button>
   </div>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
@@ -30,6 +93,7 @@
     var config = {
       apiKey: "AIzaSyCbG9LRGCAT8AagiczZwsCC__jwZcfCRFw",
     authDomain: "fir-web-login-94e44.firebaseapp.com",
+    databaseURL: "https://fir-web-login-94e44-default-rtdb.firebaseio.com",
     projectId: "fir-web-login-94e44",
     storageBucket: "fir-web-login-94e44.appspot.com",
     messagingSenderId: "129736422333",
@@ -37,6 +101,8 @@
     measurementId: "G-PSV4LY7512"
     };
     firebase.initializeApp(config);
+    // Get elements
+   
   </script>
   <script src="index.js"></script>
 
